@@ -4,7 +4,6 @@ import TechItem from './TechItem';
 
 class TechList extends Component {
  state = {
-   name: 'Alvaro',
    newTech: '',
    techs: []
  }
@@ -64,7 +63,6 @@ handleDelete = (tech) => {
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>Hello {this.state.name}</h1>
         <ul>
           {this.state.techs.map(tech => 
             <TechItem 

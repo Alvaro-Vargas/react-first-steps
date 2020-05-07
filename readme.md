@@ -1,4 +1,4 @@
-# Start guide
+# Start-guide
 Start the project: `yarn dev`
 
 # Step 1
@@ -206,17 +206,46 @@ yarn add
   @babel/plugin-proposal-class-properties
   -D
 ```
-
+**Don't forget to add this plugin to the `babel.config.js`**
 
 # React Reads:
 
 Why every `handleEvent` must be a arrow function:
 https://reactjs.org/docs/handling-events.html
 
-
 ---
+
+# STEP 7
 
 ```javascript
 yarn add
   prop-types
 ```
+
+**Prop Types** can be used to define the **TYPE** of props you are passing. Just like YUP to validate schemas.
+
+- **function** = Component.propTypes = {}
+- **class**  = static proptypes = {};
+
+**I.e.:**
+
+```jsx
+TechItem.defaultProps = {
+  tech: 'Not Provided',
+};
+
+// import PropTypes from 'prop-types';
+TechItem.propTypes = {
+  tech: Proptypes.string,
+  onDelete: Proptypes.func.isRequired,
+};
+```
+
+---
+
+# Application:
+
+  You can type technologies that will be added to component state.
+  The techs are saved to local storage.
+  You can delete the techs.
+  
